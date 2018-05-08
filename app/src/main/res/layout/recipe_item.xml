@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="item"
+            type="com.rudearts.recipesearcher.domain.model.Recipe"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/primary_pressable">
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_colossal"
+            android:foregroundGravity="center_vertical"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/user" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/avatar"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/margin_material"
+            android:layout_marginRight="@dimen/margin_colossal">
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/RepoItemTitle"
+                android:text="@{item.title}"
+                tools:text="TextView"/>
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_colossal"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_small_size"
+                android:text="@{item.description}" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_micro"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/margin_colossal"
+            android:layout_marginLeft="@dimen/margin_colossal"
+            android:background="@color/grey" />
+    </RelativeLayout>
+</layout>

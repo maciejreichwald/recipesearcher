@@ -1,0 +1,73 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion Versions.compile_sdk
+    defaultConfig {
+        applicationId ApplicationId.application_id
+        minSdkVersion Versions.min_sdk
+        targetSdkVersion Versions.target_sdk
+        versionCode Releases.version_code
+        versionName Releases.version_name
+    }
+
+    dataBinding.enabled = Modes.dataBinding
+
+    buildTypes {
+        release {
+            postprocessing {
+                removeUnusedCode false
+                removeUnusedResources false
+                obfuscate false
+                optimizeCode false
+                proguardFile 'proguard-rules.pro'
+            }
+        }
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+            returnDefaultValues = true
+        }
+    }
+}
+
+dependencies {
+    implementation project(Modules.data)
+    implementation project(Modules.domain)
+
+    implementation Libraries.kotlin_stdlib
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    kapt Libraries.databinding
+
+    implementation SupportLibraries.appcompat_v7
+    implementation SupportLibraries.design
+    implementation SupportLibraries.cardview_v7
+    implementation SupportLibraries.recyclerview_v7
+
+    implementation Libraries.rxandroid
+    implementation Libraries.rxkotlin
+
+    implementation Libraries.retrofit
+    implementation Libraries.rxjava_adapter
+    implementation Libraries.gson_converter
+    implementation Libraries.logging_interceptor
+    implementation Libraries.greendao
+
+    implementation Libraries.picasso
+    implementation Libraries.rounded_image
+
+    implementation Libraries.dagger
+    kapt Libraries.dagger_compiler
+
+    implementation Libraries.lifecycle_extensions
+    kapt Libraries.lifecycle_compiler
+
+    testImplementation TestLibraries.junit
+    testImplementation TestLibraries.assertj_core
+    testImplementation TestLibraries.mockito_kotlin
+    testImplementation TestLibraries.lifecycle_testing
+}

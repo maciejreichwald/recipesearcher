@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Recipe Searcher</string>
+    <string name="details">Details</string>
+    <string name="user">User</string>
+    <string name="repository">Repository</string>
+    <string name="unknown">Unknown</string>
+    <string name="no_items">No repositories or users were found</string>
+    <string name="name">Name</string>
+    <string name="stars">Stars</string>
+    <string name="followers">Followers</string>
+</resources>
