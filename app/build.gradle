@@ -66,8 +66,8 @@ dependencies {
     implementation Libraries.lifecycle_extensions
     kapt Libraries.lifecycle_compiler
 
-    testImplementation TestLibraries.junit
-    testImplementation TestLibraries.assertj_core
+    testImplementation TestLibraries.robolectric
+    testImplementation TestLibraries.mockito
     testImplementation TestLibraries.mockito_kotlin
     testImplementation TestLibraries.lifecycle_testing
 }

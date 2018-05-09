@@ -6,8 +6,4 @@ dependencies {
     implementation Libraries.rxkotlin
 
     implementation Libraries.inject
-
-    testImplementation TestLibraries.junit
-    testImplementation TestLibraries.assertj_core
-    testImplementation TestLibraries.mockito_kotlin
 }

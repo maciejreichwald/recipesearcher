@@ -14,7 +14,7 @@ class RemoteCalls @Inject constructor(
 
     override fun loadRecipes(): Single<List<Recipe>> = restApi.getRecipes()
             .map { response ->
-                response?.data?.requireNoNulls()?.map { recipe -> mapper.rest2recipe(recipe) }
+                response.data?.requireNoNulls()?.map { recipe -> mapper.rest2recipe(recipe) }
                         ?: emptyList()
             }
             .doAfterSuccess { recipes -> database.saveRecipes(recipes) }

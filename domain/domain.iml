@@ -56,14 +56,5 @@
     <orderEntry type="library" exported="" name="Gradle: annotations-13.0" level="project" />
     <orderEntry type="library" exported="" name="Gradle: rxjava-2.1.6" level="project" />
     <orderEntry type="library" exported="" name="Gradle: reactive-streams-1.0.1" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="Gradle: mockito-kotlin-1.5.0" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="Gradle: kotlin-reflect-1.0.7" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="Gradle: junit-4.12" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="Gradle: assertj-core-3.9.1" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="Gradle: hamcrest-core-1.3" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="Gradle: mockito-core-2.8.9" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="Gradle: byte-buddy-1.6.14" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="Gradle: byte-buddy-agent-1.6.14" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="Gradle: objenesis-2.5" level="project" />
   </component>
 </module>

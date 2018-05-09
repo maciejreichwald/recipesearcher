@@ -31,8 +31,4 @@ dependencies {
     implementation Libraries.retrofit
     implementation Libraries.gson
     implementation Libraries.greendao
-
-    testImplementation TestLibraries.junit
-    testImplementation TestLibraries.assertj_core
-    testImplementation TestLibraries.mockito_kotlin
 }
